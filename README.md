@@ -108,22 +108,107 @@ Follow the on-screen instructions to:
 ## Example Output
 
 ```
-Enter number of processes (max 10): 3
+Enter number of processes (max 10): 4
+
+Select process types and arrival times:
 
 Available process types for P1:
 1. File Write
 2. Console Echo
 3. Compute
 4. Add record to database
+Select process type (1-4): 1
+Enter arrival time (in milliseconds): 200
+Measuring burst time for P1 (file_write)...
+Measured burst time for P1 (file_write): 1243.20 ms
+
+Available process types for P2:
+1. File Write
+2. Console Echo
+3. Compute
+4. Add record to database
 Select process type (1-4): 2
 Enter arrival time (in milliseconds): 0
+Measuring burst time for P2 (console_echo)...
+Measured burst time for P2 (console_echo): 1247.65 ms
 
-... (similar for other processes)
+Available process types for P3:
+1. File Write
+2. Console Echo
+3. Compute
+4. Add record to database
+Select process type (1-4): 3
+Enter arrival time (in milliseconds): 100
+Measuring burst time for P3 (compute)...
+Measured burst time for P3 (compute): 1247.39 ms
+
+Available process types for P4:
+1. File Write
+2. Console Echo
+3. Compute
+4. Add record to database
+Select process type (1-4): 4
+Enter arrival time (in milliseconds): 300
+Measuring burst time for P4 (db_write)...
+Measured burst time for P4 (db_write): 1251.45 ms
+
+Initial Process Set:
+Process Task Type   Arrival Time (ms)   Measured Burst Time (ms)
+P1      file_write        200               1243.20
+P2      console_echo      0                 1247.65
+P3      compute           100               1247.39
+P4      db_write          300               1251.45
 
 Choose scheduling algorithm:
 1. First Come First Serve (FCFS)
 2. Round Robin (RR)
 3. Shortest Job First (SJF)
+3
+
+Executing Shortest Job First Scheduling...
+Starting P2 at time 0.00 ms
+Process 5539 echoing line 0
+Process 5539 echoing line 1
+...
+Process 5539 echoing line 99
+Completed P2 at time 1019.90 ms
+
+Starting P1 at time 1019.90 ms
+Process 5540 writing line 0
+...
+Completed P1 at time 2115.16 ms
+
+Starting P3 at time 2115.16 ms
+Process 5559 computed sum up to 10000000: 50000005000000
+...
+Process 5559 computed sum up to 2000000000: 2000000100000000000
+Process 5559 suspended at iteration 205775000, current sum: 2117167541538750
+Completed P3 at time 3363.58 ms
+
+Starting P4 at time 3363.58 ms
+Process 5560 adding Record 0
+Process 5560 adding Record 1
+...
+Process 5560 adding Record 89
+Completed P4 at time 4476.73 ms
+
+Process Statistics:
+Process  PID   Task         Arrival   Burst     Completion   Turnaround   Waiting
+P2      5539  console_echo   0        1247.65    1019.90     1019.90      0.00
+P3      5559  compute        100      1247.39    3363.58     3263.58      2016.18
+P1      5540  file_write     200      1243.20    2115.16     1915.16      671.97
+P4      5560  db_write       300      1251.45    4476.73     4176.73      2925.28
+
+Average Metrics:
+Turnaround Time: 2593.84 ms
+Waiting Time: 1403.36 ms
+
+Gantt Chart:
+  ------------ ------------ ------------ ------------ 
+ |     P2     |     P1     |     P3     |     P4     |
+  ------------ ------------ ------------ ------------ 
+0           1019         2115         3364         4477
+
 ```
 
 After execution, the program displays:
