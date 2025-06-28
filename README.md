@@ -227,9 +227,9 @@ After execution, the program displays:
 
 ## Authors
 
-- [**Gobi Elangovan**](https://github.com/Gobi05-exe) – *Core Development and System Integration*  
-- [**K Maneesh Ram**](https://github.com/Maneesh1605) – *Task Implementation and Testing*  
-- [**Abinayaa M B**](https://github.com/A-Beeeeeee) – *Scheduling Algorithms and Performance Analysis*  
+- [**Gobi Elangovan**](https://github.com/Gobi05-exe)   
+- [**K Maneesh Ram**](https://github.com/Maneesh1605) 
+- [**Abinayaa M B**](https://github.com/A-Beeeeeee) 
 
 ## References
 
