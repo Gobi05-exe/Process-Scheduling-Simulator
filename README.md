@@ -225,6 +225,12 @@ After execution, the program displays:
 - Signal handling
 - SQLite3 database operations
 
+## Authors
+
+- [**Gobi Elangovan**](https://github.com/Gobi05-exe) – *Core Development and System Integration*  
+- [**K Maneesh Ram**](https://github.com/Maneesh1605) – *Task Implementation and Testing*  
+- [**Abinayaa M B**](https://github.com/A-Beeeeeee) – *Scheduling Algorithms and Performance Analysis*  
+
 ## References
 
 - Silberschatz, A., Galvin, P. B., & Gagne, G. *Operating System Concepts*, Wiley, 2018  
